@@ -1,14 +1,18 @@
+import tkinter as tk
 from tkinter import *
 from tkinter import filedialog
 from tkinter.filedialog import askopenfilename
-import PIL
+#import PIL
 from PIL import ImageTk
+from PIL import Image as PilImage
 
 event2canvas = lambda e, c: (c.canvasx(e.x), c.canvasy(e.y))
+counter =0
+save_x = 0
+save_y = 0
 
-
-def defineAreasForStimulus(trialname):
-    root = Tk()
+def defineAreasForStimulus(trialname, root):
+    root.deiconify()
 
     # setting up a tkinter canvas with scrollbars
     frame = Frame(root, bd=2, relief=SUNKEN)
@@ -18,7 +22,7 @@ def defineAreasForStimulus(trialname):
     xscroll.grid(row=1, column=0, sticky=E + W)
     yscroll = Scrollbar(frame)
     yscroll.grid(row=0, column=1, sticky=N + S)
-    canvas = Canvas(frame, bd=0, xscrollcommand=xscroll.set, yscrollcommand=yscroll.set)
+    canvas = Canvas(frame, width=1366, height=768, bd=0, xscrollcommand=xscroll.set, yscrollcommand=yscroll.set)
     canvas.grid(row=0, column=0, sticky=N + S + E + W)
     xscroll.config(command=canvas.xview)
     yscroll.config(command=canvas.yview)
@@ -26,28 +30,65 @@ def defineAreasForStimulus(trialname):
 
     # adding the image
     path = filedialog.askopenfilename()
-    img = ImageTk.PhotoImage(Image.open(path))
-   # File = askopenfilename(parent=root, initialdir="M:/", title='Choose an image.')
-    #print("opening %s" % File)
-    #img = PhotoImage(file=File)
+    img = ImageTk.PhotoImage(PilImage.open(path))
+    # prevent img from being garbage collected
+    root.img = img
 
     canvas.create_image(0, 0, image=img, anchor="nw")
     canvas.config(scrollregion=canvas.bbox(ALL))
 
+    # adding switch buttons
+
+    switch_variable = tk.StringVar(value="area1")
+    area1_button = tk.Radiobutton(root, text="area 1", variable=switch_variable,
+                                indicatoron=False, value="area1", width=8)
+    area2_button = tk.Radiobutton(root, text="area 2", variable=switch_variable,
+                                indicatoron=False, value="area2", width=8)
+    area1_button.pack(side="left")
+    area2_button.pack(side="left")
+
+    # marking stimulus areas
     stimulus = Stimulus(trialname)
 
     # function to be called when mouse is clicked TODO change to saving coords via stimulus.add_to_area1/2
-    def printcoords(event):
+    def savecoords(event):
         # outputting x and y coords to console
         cx, cy = event2canvas(event, canvas)
         print("(%d, %d) / (%d, %d)" % (event.x, event.y, cx, cy))
+        # saving x and y coords of canvas
+        global save_x
+        global save_y
+        global counter
+        if counter % 2 == 0:
+            save_x= cx
+            save_y= cy
+            counter += 1
+        elif counter%2 != 0:
+            if switch_variable.get() == "area1":
+                stimulus.add_to_area1(save_x,save_y,cx,cy)
+            elif switch_variable.get() == "area2":
+                stimulus.add_to_area2(save_x,save_y,cx,cy)
+            else:
+                raise ValueError('error in switch button state - neither area1 nor area2 is selected')
+            counter += 1
+        else:
+            raise ValueError('counting error in savecoords function')
+
 
     # mouseclick event
-    canvas.bind("<ButtonPress-1>", printcoords)
-    canvas.bind("<ButtonRelease-1>", printcoords)
+    canvas.bind("<ButtonPress-1>", savecoords)
+    # canvas.bind("<ButtonRelease-1>", savecoords)
 
-    root.mainloop()
-     #TODO break loop
+    # wait for input of clicks
+    var = tk.IntVar()
+    button = tk.Button(root, text="Continue", command=lambda: var.set(1))
+    # button.place(relx=.5, rely=.5, anchor="c")
+    button.pack(side=tk.RIGHT, anchor=tk.SE)
+
+    print("waiting...")
+    button.wait_variable(var)
+    print("done waiting.")
+
     #TODO save stimulus
     return stimulus
 
