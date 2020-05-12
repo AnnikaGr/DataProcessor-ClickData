@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import *
 from tkinter import filedialog
 from tkinter.filedialog import askopenfilename
-#import PIL
 from PIL import ImageTk
 from PIL import Image as PilImage
 
@@ -74,7 +73,6 @@ def defineAreasForStimulus(trialname, root):
         else:
             raise ValueError('counting error in savecoords function')
 
-
     # mouseclick event
     canvas.bind("<ButtonPress-1>", savecoords)
     # canvas.bind("<ButtonRelease-1>", savecoords)
@@ -89,7 +87,13 @@ def defineAreasForStimulus(trialname, root):
     button.wait_variable(var)
     print("done waiting.")
 
-    #TODO save stimulus
+    # destroy widgets
+    frame.destroy()
+    button.destroy()
+    area1_button.destroy()
+    area2_button.destroy()
+
+    #TODO save stimulus information
     return stimulus
 
 
@@ -120,20 +124,20 @@ class Rectangle:
     def __init__(self, x1,y1,x2,y2):
         #set left and right boundaries
         if (x1<x2):
-            self.left_boundary=x1
-            self.right_boundary=x2
+            self.left_boundary= int(round(x1))
+            self.right_boundary= int(round(x2))
         elif (x2<x1):
-            self.left_boundary=x2
-            self.right_boundary=x1
+            self.left_boundary= int(round(x2))
+            self.right_boundary= int(round(x1))
         else:
             raise ValueError('Specified rectangle has size of 0 (x1==x2)')
 
         #set top and bottom boundaries
         if (y1<y2):
-            self.bottom_boundary=y1
-            self.top_boundary=y2
+            self.bottom_boundary= int(round(y1))
+            self.top_boundary= int(round(y2))
         elif (y2<y1):
-            self.bottom_boundary=y2
-            self.top_boundary=y1
+            self.bottom_boundary= int(round(y2))
+            self.top_boundary= int(round(y1))
         else:
             raise ValueError('Specified rectangle has size of 0 (y1==y2)')

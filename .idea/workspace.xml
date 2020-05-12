@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcf728e-2256-486d-bfe9-2567d6eb10d9" name="Default Changelist" comment="basic program structure">
+    <list default="true" id="6fcf728e-2256-486d-bfe9-2567d6eb10d9" name="Default Changelist" comment="First working version&#10;* click-categorization into areas works fine&#10;* implemented two different area types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mouseclicks.py" beforeDir="false" afterPath="$PROJECT_DIR$/mouseclicks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stimuli.py" beforeDir="false" afterPath="$PROJECT_DIR$/stimuli.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,13 +123,32 @@
       <option name="project" value="LOCAL" />
       <updated>1589212640345</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First working version&#10;* click-categorization into areas works fine&#10;* implemented two different area types">
+      <created>1589276798213</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589276798213</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="basic program structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic program structure" />
+    <MESSAGE value="First working version&#10;* click-categorization into areas works fine&#10;* implemented two different area types" />
+    <option name="LAST_COMMIT_MESSAGE" value="First working version&#10;* click-categorization into areas works fine&#10;* implemented two different area types" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1589195832572">
@@ -124,38 +163,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="696" y="224" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589184870939" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1589276232832">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1589283432414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589276232832" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1589276232832">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432414" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1589283432412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589276232832" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1589276232832">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432412" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1589283432411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589276232832" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1589276232832">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432411" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1589283432413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589276232832" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1589213064664">
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432413" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1589281989118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589213064664" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1589213064664">
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1589281989118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589213064664" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1589213064664">
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1589281989118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589213064664" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1589213064664">
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1589281989118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589213064664" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1589212675995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -168,16 +207,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589187768861" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/stimuli.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

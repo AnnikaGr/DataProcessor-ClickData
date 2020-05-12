@@ -32,8 +32,6 @@ else:
 
 result = evaluate.evaluatePositions(mouse_click_list, stimulus)
 
-print("Clicks in Area 1: " + str(result.mouse_clicks_area1))
-print("Clicks in Area 2: " + str(result.mouse_clicks_area2))
-print("Clicks outside specified areas: " + str(result.mouse_clicks_miss))
+evaluate.displayResult(result, root)
 
 tk.mainloop()

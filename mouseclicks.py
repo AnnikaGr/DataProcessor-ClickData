@@ -18,6 +18,6 @@ def extract_mouse_clicks_from_file(filepath, sheetname, trialname):
 class MouseClick:
 
     def __init__(self, coord_x, coord_y, reaction_time):
-        self.coord_x = coord_x
-        self.coord_y = coord_y
+        self.coord_x = int(round(coord_x))
+        self.coord_y = int(round(coord_y))
         self.reaction_time = reaction_time
