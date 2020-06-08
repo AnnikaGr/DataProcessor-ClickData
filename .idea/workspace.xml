@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcf728e-2256-486d-bfe9-2567d6eb10d9" name="Default Changelist" comment="First working version&#10;* click-categorization into areas works fine&#10;* implemented two different area types">
+    <list default="true" id="6fcf728e-2256-486d-bfe9-2567d6eb10d9" name="Default Changelist" comment="* added functionality to display user clicks and chosen areas&#10;* bug to fix: areas are displayed turned 90° clockwise!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mouseclicks.py" beforeDir="false" afterPath="$PROJECT_DIR$/mouseclicks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stimuli.py" beforeDir="false" afterPath="$PROJECT_DIR$/stimuli.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589276798213</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="* added functionality to display user clicks and chosen areas&#10;* bug to fix: areas are displayed turned 90° clockwise!">
+      <created>1589283941050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589283941050</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,12 +148,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="basic program structure" />
     <MESSAGE value="First working version&#10;* click-categorization into areas works fine&#10;* implemented two different area types" />
-    <option name="LAST_COMMIT_MESSAGE" value="First working version&#10;* click-categorization into areas works fine&#10;* implemented two different area types" />
+    <MESSAGE value="* added functionality to display user clicks and chosen areas&#10;* bug to fix: areas are displayed turned 90° to the right!" />
+    <MESSAGE value="* added functionality to display user clicks and chosen areas&#10;* bug to fix: areas are displayed turned 90° clockwise!" />
+    <option name="LAST_COMMIT_MESSAGE" value="* added functionality to display user clicks and chosen areas&#10;* bug to fix: areas are displayed turned 90° clockwise!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1589195832572">
@@ -163,38 +171,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="696" y="224" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589184870939" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1589283432414">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1591602638417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432414" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1589283432412">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591602638417" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1591602638416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432412" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1589283432411">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591602638416" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1591602638416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432411" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1589283432413">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591602638416" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1591602638417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589283432413" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1589281989118">
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591602638417" />
+    <state width="1899" height="370" key="GridCell.Tab.1.bottom" timestamp="1591602051004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1589281989118">
+    <state width="1899" height="370" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591602051004" />
+    <state width="1899" height="370" key="GridCell.Tab.1.center" timestamp="1591602051004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1589281989118">
+    <state width="1899" height="370" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591602051004" />
+    <state width="1899" height="370" key="GridCell.Tab.1.left" timestamp="1591602051004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1589281989118">
+    <state width="1899" height="370" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591602051004" />
+    <state width="1899" height="370" key="GridCell.Tab.1.right" timestamp="1591602051004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589281989118" />
+    <state width="1899" height="370" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591602051004" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1589212675995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -207,5 +215,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589187768861" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/stimuli.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

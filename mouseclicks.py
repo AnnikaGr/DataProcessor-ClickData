@@ -8,8 +8,8 @@ def extract_mouse_clicks_from_file(filepath, sheetname, trialname):
     mouse_click_list = []
 
     for index, row in excel_data.iterrows():
-        if row["trialname"] == trialname:
-            mouse_click = MouseClick(row["coord_x"], row["coord_y"], row["reaction"])
+        if row["screen:mainscreen"] == trialname:
+            mouse_click = MouseClick(row["X Coordinate"], row["Y Coordinate"], row["Reaction Time"])
             mouse_click_list.append(mouse_click)
 
     return mouse_click_list

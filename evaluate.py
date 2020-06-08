@@ -57,22 +57,23 @@ def displayResult (result, root):
     canvas.create_image(0, 0, image=img, anchor="nw")
     canvas.config(scrollregion=canvas.bbox(ALL))
 
+    # visualize defined areas
+    for rectangle in result.stimulus.areas_type1:
+        img.put("{#adc9a7}", to=( rectangle.left_boundary,rectangle.top_boundary, rectangle.right_boundary, rectangle.bottom_boundary))
+
+    for rectangle in result.stimulus.areas_type2:
+         img.put("{#a7c9c8}", to=( rectangle.left_boundary,rectangle.top_boundary, rectangle.right_boundary, rectangle.bottom_boundary))
+
+
+    # visualize mouseclicks
     for mouseclick in result.mouse_clicks_miss:
         img.put("red", to=(mouseclick.coord_x-3, mouseclick.coord_y-3, mouseclick.coord_x+3, mouseclick.coord_y+3))
 
     for mouseclick in result.mouse_clicks_area1:
-        img.put("{#%02x%02x%02x} % (66, 135, 245)", to=(mouseclick.coord_x-3, mouseclick.coord_y-3, mouseclick.coord_x+3, mouseclick.coord_y+3))
+        img.put("green", to=(mouseclick.coord_x-3, mouseclick.coord_y-3, mouseclick.coord_x+3, mouseclick.coord_y+3))
 
     for mouseclick in result.mouse_clicks_area2:
          img.put("{blue}", to=(mouseclick.coord_x - 3, mouseclick.coord_y - 3, mouseclick.coord_x + 3, mouseclick.coord_y + 3))
-
-    for rectangle in result.stimulus.areas_type1:
-         img.put("{#adc9a7}", to=(rectangle.top_boundary, rectangle.left_boundary, rectangle.bottom_boundary, rectangle.right_boundary))
-
-    for rectangle in result.stimulus.areas_type2:
-         img.put("{#a7c9c8}", to=(rectangle.top_boundary, rectangle.left_boundary, rectangle.bottom_boundary, rectangle.right_boundary))
-
-
 
 class Result:
     def __init__(self, mouse_clicks_area1, mouse_clicks_area2, mouse_clicks_miss, stimulus):

@@ -75,7 +75,7 @@ def defineAreasForStimulus(trialname, root):
 
     # mouseclick event
     canvas.bind("<ButtonPress-1>", savecoords)
-    # canvas.bind("<ButtonRelease-1>", savecoords)
+    canvas.bind("<ButtonRelease-1>", savecoords)
 
     # wait for input of clicks
     var = tk.IntVar()
